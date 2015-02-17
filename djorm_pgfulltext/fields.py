@@ -131,7 +131,7 @@ if django.VERSION[:2] >= (1,7):
         """This lookup scans for full text index entries that do not begin with
         a given phrase, like:
 
-            Model.objects.filter(search_field__ft=['Foobar', 'Baz', 'Quux'])
+            Model.objects.filter(search_field__ft_not_startswith=['Foobar', 'Baz', 'Quux'])
 
         will get translated to
 
